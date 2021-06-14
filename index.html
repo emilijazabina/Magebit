@@ -2,30 +2,58 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="css/style.css">
-    <script src="myScript.js"></script>
+    <script src="js/js.js"></script>
+    <script src="https://kit.fontawesome.com/e32250c4f3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Pineapple</title>
 </head>
-<body>
-    <div>
-        <div class="topnav" id="myTopnav">
-            <a href="#" class="active">Pineapple</a>
-            <a href="#">About</a>
-            <a href="#">How it works</a>
-            <a href="#">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>          
-    </div>
-    <div>
-        <h2>
-            Subscribe to Newsletter
-        </h2>
-        <p>
-           Subscribe to our newsletter and get 10% discaunt on Pineapple glasses! 
-        </p>
-    </div>
-</body>`
+<body onload="setInputs()">
+    <div class="main">
+        <div class="text-side">
+            <div class="link_div">
+                <div>
+                    <img class="pineapple-logo" src="media/pineapple-logo.png">
+                    <a href="#" class="pineapple">Pineapple</a>
+                </div>
+                <a href="#" class="up_link">About</a>
+                <a href="#" class="up_link">How it works</a>
+                <a href="#" class="up_link">Contact</a>
+            </div>
+            <div class="text-part">
+                <div class="heading_div">
+                    <h2 class="heading_sub">
+                        Subscribe to Newsletter
+                    </h2>
+                    <p class="heading_text">
+                        Subscribe to our newsletter and get 10% discount on Pineapple glasses!
+                    </p>
+                </div>
+                <form name="myForm" onsubmit="return validateEmail()">
+                    <input autocomplete="off" class="email-box" type="text" id="email" name="email" placeholder="Type your email address here…">
+                    <input type="submit" value="&#8594;" class="submit">
+                    <div style="color:red; height:24px; margin-top:8px;" id="chk_option_error"></div>
+                    <input type="checkbox" id="termsofservice" name="termsofservice" value="agree">
+                    <label for="termsofservice">I agree to <b><u>terms of service</u></b></label><br>
+                </form>
+                <div style=" margin-left:10%; margin-top:8px; display:none;" id="chk_option_success">
+                    <img src="media/ic_succsess"
+                    <h2 class="heading_sub">
+                        Thanks for subscribing!
+                    </h2>
+                    <p class="heading_text">
+                        You have successfully subscribed to our email listing. Check your email for the discount code.
+                    </p></div>
+                <hr>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    </a><i class="fab fa-twitter"></i>
+                    </a><i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="img-side"></div>
+    </div> 
+</body>
